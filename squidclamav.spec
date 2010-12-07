@@ -1,7 +1,7 @@
 Summary:	A Clamav Antivirus Redirector for Squid
 Name:		squidclamav
 Version:	5.3
-Release:	%mkrel 2
+Release:	%mkrel 3
 Group:		System/Servers
 License:	GPLv2
 URL:		http://sourceforge.net/projects/%{name}/
