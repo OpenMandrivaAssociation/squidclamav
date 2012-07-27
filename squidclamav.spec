@@ -1,6 +1,6 @@
 Summary:	A Clamav Antivirus Redirector for Squid
 Name:		squidclamav
-Version:	6.7
+Version:	6.8
 Release:	1
 Group:		System/Servers
 License:	GPLv2
