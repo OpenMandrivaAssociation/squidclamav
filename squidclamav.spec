@@ -1,16 +1,16 @@
 Summary:	A Clamav Antivirus Redirector for Squid
 Name:		squidclamav
-Version:	5.3
-Release:	%mkrel 3
+Version:	6.7
+Release:	1
 Group:		System/Servers
 License:	GPLv2
 URL:		http://sourceforge.net/projects/%{name}/
 Source0:	http://kent.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
-Patch0:		%{name}-mdv_conf.diff
 BuildRequires:	curl-devel
+BuildRequires:	c-icap-devel
 Requires:	squid curl clamav clamd
 Suggests:	squidGuard
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Patch0:		squidclamav-mdv_conf.diff
 
 %description
 SquidClamAv is a dedicated ClamAV antivirus redirector for Squid. It can run
@@ -20,8 +20,7 @@ easy to install and works even with heavy Squid access.
 %prep
 
 %setup -q
-%patch0 -p0
-
+%patch0 -p1
 #chmod 644 ChangeLog README clwarn.cgi*
 
 %build
@@ -31,8 +30,6 @@ easy to install and works even with heavy Squid access.
 %make
 
 %install
-rm -rf %{buildroot}
-
 %{__install} -d -m 0755 %{buildroot}%{_sysconfdir}
 %{__install} -d -m 0755 %{buildroot}%{_sysconfdir}/logrotate.d
 %{__install} -d -m 0755 %{buildroot}/var/log/%{name}
@@ -57,15 +54,12 @@ install -m0644 %{name}.logrotate %{buildroot}%{_sysconfdir}/logrotate.d/%{name}
 
 rm -f %{buildroot}%{_datadir}/%{name}/README
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc ChangeLog README
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/%{name}.conf
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/logrotate.d/%{name}
-%attr(0755,root,root) %{_bindir}/%{name}
+#%attr(0755,root,root) %{_bindir}/%{name}
 %attr(0755,root,root) %{_libexecdir}/%{name}/*
+%attr(0755,root,root) %{_libdir}/c_icap/%{name}.so
 %attr(0755,root,root) %{_mandir}/man1/*1*
 %attr(0755,squid,squid) %dir /var/log/%{name}
