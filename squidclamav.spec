@@ -63,3 +63,59 @@ rm -f %{buildroot}%{_datadir}/%{name}/README
 %attr(0755,root,root) %{_libdir}/c_icap/%{name}.so
 %attr(0755,root,root) %{_mandir}/man1/*1*
 %attr(0755,squid,squid) %dir /var/log/%{name}
+
+
+%changelog
+* Fri Jul 27 2012 Alexander Khrukin <akhrukin@mandriva.org> 6.8-1
++ Revision: 811264
+- version update 6.8
+
+* Fri Jul 27 2012 Alexander Khrukin <akhrukin@mandriva.org> 6.7-1
++ Revision: 811229
+- version update  6.7
+- version update  6.7
+
+* Wed Dec 08 2010 Oden Eriksson <oeriksson@mandriva.com> 5.3-3mdv2011.0
++ Revision: 614973
+- the mass rebuild of 2010.1 packages
+
+* Thu May 06 2010 Luis Daniel Lucio Quiroz <dlucio@mandriva.org> 5.3-2mdv2010.1
++ Revision: 542744
+- Rebuild
+
+  + Guillaume Rousse <guillomovitch@mandriva.org>
+    - rise from the dead, there is a volonteer to maintain it
+
+* Sun Apr 25 2010 Emmanuel Andry <eandry@mandriva.org> 5.3-1mdv2010.1
++ Revision: 538730
+- New version 5.3
+- rediff config patch
+- update files list
+
+* Wed Jan 27 2010 Frederik Himpe <fhimpe@mandriva.org> 4.3-1mdv2010.1
++ Revision: 497393
+- Update to new version 4.3
+
+* Wed Jan 27 2010 Frederik Himpe <fhimpe@mandriva.org> 4.2-1mdv2010.1
++ Revision: 497392
+- Update to new version 4.2
+- Rediff configuration patch
+
+* Sun Sep 20 2009 Thierry Vignaud <tv@mandriva.org> 3.9-2mdv2010.0
++ Revision: 445227
+- rebuild
+
+* Wed Dec 17 2008 Oden Eriksson <oeriksson@mandriva.com> 3.9-1mdv2009.1
++ Revision: 315152
+- 3.9
+
+* Mon Dec 08 2008 Oden Eriksson <oeriksson@mandriva.com> 3.8-1mdv2009.1
++ Revision: 311855
+- 3.8
+- rediffed P0
+
+* Fri Oct 24 2008 Oden Eriksson <oeriksson@mandriva.com> 3.7-1mdv2009.1
++ Revision: 296937
+- added more fixes
+- import squidclamav
+
