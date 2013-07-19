@@ -1,11 +1,11 @@
 Summary:	A Clamav Antivirus Redirector for Squid
 Name:		squidclamav
-Version:	6.8
+Version:	6.10
 Release:	1
 Group:		System/Servers
 License:	GPLv2
 URL:		http://sourceforge.net/projects/%{name}/
-Source0:	http://kent.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
+Source0:	https://sourceforge.net/projects/squidclamav/files/squidclamav/6.10/%{name}-%{version}.tar.gz
 BuildRequires:	curl-devel
 BuildRequires:	c-icap-devel
 Requires:	squid curl clamav clamd
@@ -118,4 +118,5 @@ rm -f %{buildroot}%{_datadir}/%{name}/README
 + Revision: 296937
 - added more fixes
 - import squidclamav
+
 
