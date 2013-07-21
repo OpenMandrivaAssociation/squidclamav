@@ -1,2 +1,4 @@
+removed_sources:
+  squidclamav-6.8.tar.gz: 03b20cb75b02ed168cb000caea703cff320f4188
 sources:
-  "squidclamav-6.8.tar.gz": 03b20cb75b02ed168cb000caea703cff320f4188
+  squidclamav-6.10.tar.gz: b049d9f64cfc19d257db4e866c7cc0f1cb4b40c3
