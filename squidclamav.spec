@@ -4,7 +4,7 @@ Version:	6.10
 Release:	2
 Group:		System/Servers
 License:	GPLv2
-URL:		http://sourceforge.net/projects/%{name}/
+URL:		https://sourceforge.net/projects/%{name}/
 Source0:	https://sourceforge.net/projects/squidclamav/files/squidclamav/6.10/%{name}-%{version}.tar.gz
 BuildRequires:	curl-devel
 BuildRequires:	c-icap-devel
