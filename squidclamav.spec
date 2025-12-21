@@ -6,6 +6,11 @@ Group:		System/Servers
 License:	GPLv2
 URL:		https://sourceforge.net/projects/%{name}/
 Source0:	https://sourceforge.net/projects/squidclamav/files/squidclamav/6.10/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	curl-devel
 BuildRequires:	c-icap-devel
 Requires:	squid curl clamav clamd
